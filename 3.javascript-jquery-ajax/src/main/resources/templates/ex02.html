@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>タイトル</title>
+</head>
+<body>
+	<div id="passError" style="color:red"></div>
+	Password:<input type="password" name="password" id="password">
+	<div id="passError2" style="color:red"></div>
+	Confirmation Password:<input type="password" name="password2" id="password2">
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script th:src="@{/js/ex02.js}"></script>
+</body>
+</html>
