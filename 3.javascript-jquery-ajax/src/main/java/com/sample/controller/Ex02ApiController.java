@@ -19,22 +19,21 @@ public class Ex02ApiController {
 		
 		System.out.println(password2);
 		
-		String pass = "";
 		if(password.length() < 8 ) {
 			passError = "パスワードは８文字以上で入力してください";
 			
 		} else {
 			passError = "パスワード入力OK！";
-			pass = password;
 		}
+		map.put("passError", passError);
 		
-		if(password2.equals(pass)) {
+		if(password.equals(password2)) {
 			passError2 = "確認用パスワード入力OK";
 		}else {
 			passError2 = "パスワードが一致しません";
 		}
 		
-		map.put("passError", passError);
+		
 		
 		map.put("passError2", passError2);
 		return map;

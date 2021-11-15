@@ -1,5 +1,11 @@
 $(function(){
-	$(document).on('keyup','#password','#password2',function(){
+	$(document).on('keyup','#password',function(){
+		check_password();
+	});
+	$(document).on('keyup','#password2',function(){
+		check_password();
+	});
+	function check_password(){
 		let hostUrl = 'http://localhost:8080/pass/check';
 		let inputPass = $('#password').val();
 		let inputPass2 = $('#password2').val();
@@ -23,5 +29,5 @@ $(function(){
 			console.log('textStatus     : ' + textStatus);
 			console.log('errorThrown    : ' + errorThrown.message);
 		});
-	});
+	};
 });
